@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace Dsw2025Ej11.Domain;
 
+public delegate void DesaparecerDelagate(Estrella estrella);
 public class Estrella
 {
+    private Action<Luminosidad> _iluminar;
+    public event DesaparecerDelagate? Desaparecer;
     public int Edad { get; set; }
     public int TiempoDeVida { get; set; }
     public Luminosidad Luminosidad { get; set; }
 
-    public Estrella()
+    public Estrella(Action<Luminosidad> iluminar)
     {
+        _iluminar = iluminar;
         var random = new Random();
         var vida = random.Next(50, 300);
         TiempoDeVida = vida;
@@ -22,6 +26,7 @@ public class Estrella
 
     public void PasoDelTiempo()
     {
+        var actual = Luminosidad;
         if (Edad <= TiempoDeVida * 0.1)
         {
             Luminosidad = Luminosidad.Media;
@@ -42,6 +47,14 @@ public class Estrella
         else
         {
             Luminosidad = Luminosidad.Nula;
+            OnDesaparecer();
         }
+        if(actual == Luminosidad)
+            return;
+        _iluminar(Luminosidad);
     }
+    private void OnDesaparecer()
+    {
+        Desaparecer?.Invoke(this);
+    }   
 }

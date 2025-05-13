@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Dsw2025Ej11.Domain;
 
 namespace Dsw2025Ej11.Presentation;
 
 internal class VistaPrincipal
 {
-
+    private static Constelacion _constelacion = new("Osa Mayor");
     public static void Iniciar()
     {
+        _constelacion.Cambios += ActualizarCantidad;
         Console.Title = "La Constelación";
-        Console.SetWindowSize(140, 50); // Cambia el tamaño de la ventana de la consola
+        Console.SetWindowSize(140, 50); 
         DibujarBordes(Console.WindowWidth, Console.WindowHeight);
-        Console.SetCursorPosition(2, 48);
-        Console.WriteLine("[A] Agregar una estrella | [S] Salir");
-        Console.CursorVisible = false; // Oculta el cursor
-        ConsoleKeyInfo key = new ConsoleKeyInfo();
+        ActualizarCantidad(0);
+        Console.CursorVisible = false; 
+        ConsoleKeyInfo key = new();
         do
         {
             key = Console.ReadKey(true);
@@ -32,13 +27,8 @@ internal class VistaPrincipal
 
     static void DibujarEstrella()
     {
-        Console.SetCursorPosition(0,0); // Mueve el cursor a la posición (0, 0)
-        Random random = new Random();
-        var w = random.Next(3, 138);
-        var h = random.Next(3, 46);
         var estrella = new EstrellaTexto();
-        estrella.Ubicar(w, h);
-        Console.SetCursorPosition(2, 48);
+        _constelacion.CrearEstrella(estrella.Ubicar, estrella.Iluminar);
     }
 
     static void DibujarBordes(int width, int height)
@@ -49,12 +39,10 @@ internal class VistaPrincipal
             return;
         }
 
-        // Línea superior
         Console.Write("┌");
         Console.Write(new string('─', width - 2));
         Console.WriteLine("┐");
 
-        // Líneas intermedias
         for (int i = 0; i < height - 4; i++)
         {
             Console.Write("│");
@@ -62,9 +50,15 @@ internal class VistaPrincipal
             Console.WriteLine("│");
         }
 
-        // Línea inferior
         Console.Write("└");
         Console.Write(new string('─', width - 2));
         Console.WriteLine("┘");
+    }
+
+    static void ActualizarCantidad(int cantidad)
+    {
+        Console.ResetColor();
+        Console.SetCursorPosition(2, 48);
+        Console.WriteLine($"[A] Agregar una estrella | [S] Salir      -  Total de estrellas: {cantidad}    ");
     }
 }
