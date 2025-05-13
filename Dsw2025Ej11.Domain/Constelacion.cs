@@ -34,7 +34,7 @@ public class Constelacion
         var x = random.Next(1, (int)Ancho) / Ancho;
         var y = random.Next(1, (int)Alto) / Alto;
         var estrella = new Estrella();
-        _pasoDelTiempo += estrella.PasoDelTiempo;
+        _pasoDelTiempo += estrella.EvolucionEstelar;
         Estrellas.Add(estrella);
     }
 }
