@@ -1,27 +1,27 @@
-# Ejercicio N° 11
+# Ejercicio NÂ° 11
 ## Desarrollo de Software
 ### Eventos y Delegados
 
-Una **constelación**, en astronomía, es el límite en que está dividida la bóveda celeste. Cada una está conformada por la agrupación convencional de estrellas, cuya posición en el cielo nocturno es aparentemente invariable.
+Una **constelaciÃ³n**, en astronomÃ­a, es el lÃ­mite en que estÃ¡ dividida la bÃ³veda celeste. Cada una estÃ¡ conformada por la agrupaciÃ³n convencional de estrellas, cuya posiciÃ³n en el cielo nocturno es aparentemente invariable.
 
-Una **estrella** es un objeto astronómico luminoso con forma de esferoide, que se mantiene debido al equilibrio hidrostático alcanzado por su propia gravedad. Durante al menos una parte de su vida, una estrella brilla debido a la fusión termonuclear del hidrógeno en helio en su núcleo, lo que libera energía. Esta energía atraviesa el interior de la estrella y, después, se irradia hacia el espacio exterior.
+Una **estrella** es un objeto astronÃ³mico luminoso con forma de esferoide, que se mantiene debido al equilibrio hidrostÃ¡tico alcanzado por su propia gravedad. Durante al menos una parte de su vida, una estrella brilla debido a la fusiÃ³n termonuclear del hidrÃ³geno en helio en su nÃºcleo, lo que libera energÃ­a. Esta energÃ­a atraviesa el interior de la estrella y, despuÃ©s, se irradia hacia el espacio exterior.
 
 
 ## Tarea
-Desarrollar una aplicación que permita crear estrellas en una constelación y simular la evolución estelar.
+Desarrollar una aplicaciÃ³n que permita crear estrellas en una constelaciÃ³n y simular la evoluciÃ³n estelar.
 
-### Características de la Solución
+### CaracterÃ­sticas de la SoluciÃ³n
 
 - Lenguaje: C# 12.0
 - Plataforma: .NET 8
 
-### Estructura de la Solución
+### Estructura de la SoluciÃ³n
 
-- `Dsw2025Ej11.Presentation`: Presentación y lógica de la interfaz.
-- `Dsw2025Ej11.Domain`: Lógica de dominio, entidades como Constelación y Estrella.
+- `Dsw2025Ej11.Presentation`: PresentaciÃ³n y lÃ³gica de la interfaz.
+- `Dsw2025Ej11.Domain`: LÃ³gica de dominio, entidades como ConstelaciÃ³n y Estrella.
 
 ### Referencias
 
-[Wikipedia - Constelación](https://es.wikipedia.org/wiki/Constelaci%C3%B3n)]
-[Wikipedia - Estrella](https://es.wikipedia.org/wiki/Estrella)]
-[Wikipedia - Evolución Estelar](https://es.wikipedia.org/wiki/Evoluci%C3%B3n_estelar)]]
+[Wikipedia - ConstelaciÃ³n](https://es.wikipedia.org/wiki/Constelaci%C3%B3n)
+[Wikipedia - Estrella](https://es.wikipedia.org/wiki/Estrella)
+[Wikipedia - EvoluciÃ³n Estelar](https://es.wikipedia.org/wiki/Evoluci%C3%B3n_estelar)]
