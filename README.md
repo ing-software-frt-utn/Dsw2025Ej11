@@ -22,6 +22,6 @@ Desarrollar una aplicación que permita crear estrellas en una constelación y s
 
 ### Referencias
 
-[Wikipedia - Constelación](https://es.wikipedia.org/wiki/Constelaci%C3%B3n)
-[Wikipedia - Estrella](https://es.wikipedia.org/wiki/Estrella)
-[Wikipedia - Evolución Estelar](https://es.wikipedia.org/wiki/Evoluci%C3%B3n_estelar)]
+- [Wikipedia - Constelación](https://es.wikipedia.org/wiki/Constelaci%C3%B3n)
+- [Wikipedia - Estrella](https://es.wikipedia.org/wiki/Estrella)
+- [Wikipedia - Evolución Estelar](https://es.wikipedia.org/wiki/Evoluci%C3%B3n_estelar)
