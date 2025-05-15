@@ -46,6 +46,8 @@ public class Constelacion
 
     private void Desaparecer(Estrella estrella)
     {
+        estrella.Desaparecer -= Desaparecer;
+        _pasoDelTiempo -= estrella.PasoDelTiempo;
         Estrellas.Remove(estrella);
         OnCambios();
     }
